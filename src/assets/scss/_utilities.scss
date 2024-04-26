@@ -1,0 +1,79 @@
+@for $i from 0 through 10 {
+    .mb-#{$i} {
+        margin-bottom: $i * 4px;
+    }
+
+    .mt-#{$i} {
+        margin-top: $i * 4px;
+    }
+
+    .ml-#{$i} {
+        margin-left: $i * 4px;
+    }
+
+    .mr-#{$i} {
+        margin-right: $i * 4px;
+    }
+
+    .mx-#{$i} {
+        margin-right: $i * 4px;
+        margin-left: $i * 4px;
+    }
+
+    .my-#{$i} {
+        margin-top: $i * 4px;
+        margin-bottom: $i * 4px;
+    }
+
+    .m-#{$i} {
+        margin: $i * 4px;
+    }
+}
+
+@for $i from 0 through 10 {
+    .pb-#{$i} {
+        padding-bottom: $i * 4px;
+    }
+
+    .pt-#{$i} {
+        padding-top: $i * 4px;
+    }
+
+    .pl-#{$i} {
+        padding-left: $i * 4px;
+    }
+
+    .pr-#{$i} {
+        padding-right: $i * 4px;
+    }
+
+    .px-#{$i} {
+        padding-right: $i * 4px;
+        padding-left: $i * 4px;
+    }
+
+    .py-#{$i} {
+        padding-top: $i * 4px;
+        padding-bottom: $i * 4px;
+    }
+
+    .p-#{$i} {
+        padding: $i * 4px;
+    }
+}
+
+[data-fancybox] {
+    cursor: pointer;
+}
+
+@media (min-width: 1600px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1520px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1640px;
+    }
+}
