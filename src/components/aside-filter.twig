@@ -1,0 +1,103 @@
+<form class="list__sidebar">
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset1"><strong>Форма обучения</strong></div>
+        <div class="collapse show" id="fieldset1">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="f1">
+                <label class="form-check-label" for="f1">Дистанционная</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="f2">
+                <label class="form-check-label" for="f2">Очная</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="f3">
+                <label class="form-check-label" for="f3">Смешанная</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset2"><strong>Длительность</strong></div>
+        <div class="collapse show" id="fieldset2">
+            <div class="range" data-min="0" data-max="120" data-step="1"></div>
+            <div class="d-flex gap-2 values">
+                <input type="number" class="form-control min" readonly id="durationfrom" placeholder="от">
+                <input type="number" class="form-control max" readonly id="durationto" placeholder="до">
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset3"><strong>Список выдаваемых документов</strong></div>
+        <div class="collapse show" id="fieldset3">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="d1">
+                <label class="form-check-label" for="d1">Удостоверение о повышении квалификации</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="d2">
+                <label class="form-check-label" for="d2">Диплом о профессиональной переподготовке</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="d3">
+                <label class="form-check-label" for="d3">Свидетельство о профессии рабочего, должности служащего</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset4"><strong>Требование к образованию</strong></div>
+        <div class="collapse show" id="fieldset4">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="edu" value="" id="e1">
+                <label class="form-check-label" for="e1">Высшее</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="edu" value="" id="e2">
+                <label class="form-check-label" for="e2">Среднее специальное</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="edu" value="" id="e3">
+                <label class="form-check-label" for="e3">Не важно</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset5"><strong>Тип программы</strong></div>
+        <div class="collapse show" id="fieldset5">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="p1">
+                <label class="form-check-label" for="p1">Программа повышение квалификации</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="p2">
+                <label class="form-check-label" for="p2">Профессиональная переподготовка</label>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset6"><strong>Стоимость</strong></div>
+        <div class="collapse show" id="fieldset6">
+            <div class="range" data-min="0" data-max="120000" data-step="1000"></div>
+            <div class="d-flex gap-2 values">
+                <input type="number" class="form-control min" readonly id="pricefrom" placeholder="от">
+                <input type="number" class="form-control max" readonly id="priceto" placeholder="до">
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="list__sidebar-fieldset">
+        <div class="list__sidebar-title" data-bs-toggle="collapse" data-bs-target="#fieldset7"><strong>Дата проведения</strong></div>
+        <div class="collapse show" id="fieldset7">
+            <div class="d-flex gap-2">
+                <input type="date" class="form-control" id="datefrom" placeholder="от">
+                <input type="date" class="form-control" id="dateto" placeholder="до">
+            </div>
+        </div>
+    </fieldset>
+    <div class="form-check mb-9">
+        <input class="form-check-input" type="checkbox" value="" id="citizenship">
+        <label class="form-check-label" for="citizenship">У меня иностранное гражданство</label>
+    </div>
+    <div class="d-grid gap-2">
+        <button class="btn btn-secondary" type="reset">Сбросить</button>
+        <button class="btn btn-primary" type="submit">Применить</button>
+    </div>
+</form>
