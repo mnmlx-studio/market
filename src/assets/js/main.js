@@ -19,13 +19,61 @@ document.addEventListener("DOMContentLoaded", function() {
         pagination: {
             el: ".swiper-pagination",
             type: "fraction",
-	        renderFraction: function(a,b) {
-	        	return '<span class="' + a + '"></span>' + '&nbsp;&nbsp;&mdash;&nbsp;&nbsp;' + '<span class="' + b + '"></span>';
-	        }
+            renderFraction: function(a, b) {
+                return '<span class="' + a + '"></span>' + '&nbsp;&nbsp;&mdash;&nbsp;&nbsp;' + '<span class="' + b + '"></span>';
+            }
         },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
     });
+
+    let event = new CustomEvent("dialog-show", {
+      bubbles: true
+    })
+
+    $("[data-toggle='dialog']").on('click', function() {
+        let _target = $(this).data('target')
+        $(`.dialog#${_target}`).toggleClass('show')
+
+        catalog.dispatchEvent(event)
+
+        return false;
+    })
+
+    $("body").on('click', ".dialog-backdrop", function() {
+        $(this).closest('.dialog').removeClass('show')
+        return false;
+    })
+
+    $("body").on('click', ".dialog-close", function() {
+        $(this).closest('.dialog').removeClass('show')
+        return false;
+    })
+
+    $("[data-toggle='nav']").on('click', function() {
+        let _target = $(this).data('target')
+
+        $("[data-toggle='nav']").removeClass('active')
+        $(this).addClass('active')
+
+        $(`.nav-pane`).removeClass('active')
+        $(`.nav-pane#${_target}`).addClass('active')
+
+        return false;
+    })
+
+    $("[data-toggle='spoiler']").on('click', function() {
+        let _target = $(this).data('target')
+        
+        $("[data-toggle='spoiler']").removeClass('active')
+        $(this).addClass('active')
+
+        $(`.spoiler-pane`).removeClass('active')
+        $(`.spoiler-pane#${_target}`).addClass('active')
+
+        return false;
+    })
+
 });

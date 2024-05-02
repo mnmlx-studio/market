@@ -17,22 +17,93 @@
         gap: 14px;
         align-items: center;
         justify-content: flex-start;
+        flex: 1 0 auto;
+
+        .logo {
+            margin: 0 24px 0 0;
+
+            a {
+                display: inline-block;
+            }
+
+            img {
+                max-height: 60px;
+            }
+        }
+
+        .btn {
+            padding: 14px 24px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .search {
+            flex: 1 0 auto;
+
+            input {
+                width: 100%;
+                max-width: 365px;
+                height: 52px;
+                padding: 10px 32px 10px 60px;
+                background: #FFFFFF url('../svg/search.svg') 24px center no-repeat;
+                border: 1px solid #CED8EB;
+                border-radius: 8px;
+            }
+        }
     }
 
     .social {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 8px;
 
         &__item {}
+
         &__link {
-        	display: flex;
-        	align-items: center;
-        	justify-content: center;
-        	border-radius: 12px;
-        	width: 40px;
-        	height: 40px;
-        	background: #f0f4fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            background: #f0f4fa;
+
+            &:hover {
+                background: #0080FF;
+
+                img {
+                    filter: brightness(100);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        .nav {
+            gap: 40px;
+
+            &__link {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 125%;
+                color: #4D5F7D;
+
+                &:hover {
+                    color: #0080ff;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        .btn {
+            padding: 14px 24px;
+            line-height: 1;
+            font-size: 18px;
+            font-weight: 600;
+            color: #070e18;
         }
     }
 }

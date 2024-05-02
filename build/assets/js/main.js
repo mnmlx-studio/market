@@ -30,5 +30,52 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev"
         }
     });
+
+    var event = new CustomEvent("dialog-show", {
+        bubbles: true
+    });
+
+    $("[data-toggle='dialog']").on('click', function () {
+        var _target = $(this).data('target');
+        $('.dialog#' + _target).toggleClass('show');
+
+        catalog.dispatchEvent(event);
+
+        return false;
+    });
+
+    $("body").on('click', ".dialog-backdrop", function () {
+        $(this).closest('.dialog').removeClass('show');
+        return false;
+    });
+
+    $("body").on('click', ".dialog-close", function () {
+        $(this).closest('.dialog').removeClass('show');
+        return false;
+    });
+
+    $("[data-toggle='nav']").on('click', function () {
+        var _target = $(this).data('target');
+
+        $("[data-toggle='nav']").removeClass('active');
+        $(this).addClass('active');
+
+        $('.nav-pane').removeClass('active');
+        $('.nav-pane#' + _target).addClass('active');
+
+        return false;
+    });
+
+    $("[data-toggle='spoiler']").on('click', function () {
+        var _target = $(this).data('target');
+
+        $("[data-toggle='spoiler']").removeClass('active');
+        $(this).addClass('active');
+
+        $('.spoiler-pane').removeClass('active');
+        $('.spoiler-pane#' + _target).addClass('active');
+
+        return false;
+    });
 });
 //# sourceMappingURL=main.js.map

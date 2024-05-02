@@ -33,12 +33,11 @@
                 <div class="col d-flex">
                     <div class="header__catalog">
                         <div class="logo">
-                            <a href=""><img src="assets/images/logo.svg" alt=""></a>
+                            <a href="#"><img src="assets/images/logo.svg" alt=""></a>
                         </div>
-                        <a href="#" class="btn btn-primary"><img src="assets/svg/menu.svg" alt=""> Каталог курсов</a>
+                        <a href="#" class="btn btn-primary" data-target="catalog" data-toggle="dialog"><img src="assets/svg/menu.svg" alt=""> Каталог курсов</a>
                         <div class="search">
                             <div class="input-group">
-                                <span class="input-group-text"><img src="assets/svg/search.svg" alt=""></span>
                                 <input type="text" class="form-control" placeholder="Чему хотите научиться?" />
                             </div>
                         </div>
@@ -63,13 +62,207 @@
                         </ul>
                     </div>
                     <div class="header__contacts">
-                        <a href="#" class="btn btn-outline-primary">Контакты <img src="assets/svg/hi.svg" alt=""></a>
+                        <a href="#" data-target="contacts" data-toggle="dialog" class="btn btn-outline-primary">Контакты <img src="assets/svg/hi.svg" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <nav class="nav nav_mobile"></nav>
+
+    <div class="dialog" id="contacts">
+        <div class="dialog-backdrop"></div>
+        <div class="dialog-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-column align-items-end">
+                            <div class="dialog__contacts">
+                                <div class="title">Контакты <a href="#" class="dialog-close">&#215;</a></div>
+                                <div class="dialog__contacts-item">
+                                    <span>Основной телефон</span>
+                                    <a href="tel:">7 (495) 255-67-67</a>
+                                </div>
+                                <div class="dialog__contacts-item">
+                                    <span>Дополнительный</span>
+                                    <a href="tel:">7 (495) 255-67-67</a>
+                                </div>
+                            </div>
+                            <div class="dialog__contacts">
+                                <div class="title">Вы можете оставить заявку на обратный звонок</div>
+                                <form action="">
+                                    <p>Отправьте заявку на консультацию, и мы вам перезвоним в течение часа</p>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="name" placeholder="Ваше Имя" />
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="phone" placeholder="Ваш номер" />
+                                    </div>
+                                    <button class="btn btn-primary">Отправить заявку</button>
+                                    <span>Нажимая на кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></span>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dialog" id="catalog">
+        <div class="dialog-backdrop"></div>
+        <div class="dialog-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="dialog__catalog">
+                            <div class="dialog__catalog-nav">
+                                <div class="d-flex flex-column">
+                                    <div class="dialog__catalog-title">Образование</div>
+                                    <div class="dialog__catalog-item">
+                                        <button class="dialog__catalog-link active" data-toggle="nav" data-target="n1">
+                                            <span class="icon"><img src="assets/svg/nav1.svg" alt=""></span>
+                                            <span class="text">
+                                                <strong>Высшее</strong>
+                                                124 курсов
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dialog__catalog-item">
+                                        <button class="dialog__catalog-link" data-toggle="nav" data-target="n2">
+                                            <span class="icon"><img src="assets/svg/nav2.svg" alt=""></span>
+                                            <span class="text">
+                                                <strong>Дополнительное</strong>
+                                                124 курсов
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="dialog__catalog-item">
+                                        <button class="dialog__catalog-link" data-toggle="nav" data-target="n3">
+                                            <span class="icon"><img src="assets/svg/nav3.svg" alt=""></span>
+                                            <span class="text">
+                                                <strong>Корпоративное</strong>
+                                                124 курсов
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-rounded">Смотреть всё</a>
+                            </div>
+                            <div class="dialog__catalog-content">
+                                <div class="dialog__catalog-pane nav-pane active" id="n1">
+                                    <div class="sticky">
+                                        <div class="title">Категории</div>
+                                        <div class="spoiler-grid">
+                                            <div class="spoiler-link active" data-toggle="spoiler" data-target="sp1">Бизнес</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp2">Китай</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp3">Психология</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp4">Политика</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp5">Творчество и креатив</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp6">Информационная безопасность</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp7">Здоровье и красота</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp8">Языки и перевод</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp9">Подготовка к ЕГЭ</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp10">Soft Skills</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp11">Управление</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp12">Социальная работа</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp13">Геология</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp14">Терраформирование</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp15">История</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp16">Акробатика</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp17">Математика</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp18">Социология</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp19">Техника</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp20">Политика</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp21">Наука</div>
+                                            <div class="spoiler-link" data-toggle="spoiler" data-target="sp22">Инженерия и технологии</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="title">Здоровье и красота <span>1923 курсов</span></div>
+                                        <div class="spoiler-pane active" id="sp1">
+                                            <a href="#" class="link">Международные отношения</a>
+                                            <a href="#" class="link">Навыки для руководителя</a>
+                                            <a href="#" class="link">Продажи</a>
+                                            <a href="#" class="link">Онлайн-проекты</a>
+                                            <a href="#" class="link">Медицина</a>
+                                            <a href="#" class="link">Полиграфолог</a>
+                                            <a href="#" class="link">Анимация</a>
+                                            <a href="#" class="link">Режиссура</a>
+                                            <a href="#" class="link">Униформология</a>
+                                            <a href="#" class="link">Геральдика</a>
+                                            <a href="#" class="link">Военно-мемориальная деятельность</a>
+                                            <a href="#" class="link">Консультирование</a>
+                                            <a href="#" class="link">Международные отношения</a>
+                                            <a href="#" class="link">Навыки для руководителя</a>
+                                            <a href="#" class="link">Продажи</a>
+                                            <a href="#" class="link">Онлайн-проекты</a>
+                                            <a href="#" class="link">Медицина</a>
+                                            <a href="#" class="link">Полиграфолог</a>
+                                            <a href="#" class="link">Анимация</a>
+                                            <a href="#" class="link">Режиссура</a>
+                                            <a href="#" class="link">Униформология</a>
+                                            <a href="#" class="link">Геральдика</a>
+                                            <a href="#" class="link">Военно-мемориальная деятельность</a>
+                                            <a href="#" class="link">Консультирование</a>
+                                            <a href="#" class="link">Международные отношения</a>
+                                            <a href="#" class="link">Навыки для руководителя</a>
+                                            <a href="#" class="link">Продажи</a>
+                                            <a href="#" class="link">Онлайн-проекты</a>
+                                            <a href="#" class="link">Медицина</a>
+                                            <a href="#" class="link">Полиграфолог</a>
+                                            <a href="#" class="link">Анимация</a>
+                                            <a href="#" class="link">Режиссура</a>
+                                            <a href="#" class="link">Униформология</a>
+                                            <a href="#" class="link">Геральдика</a>
+                                            <a href="#" class="link">Военно-мемориальная деятельность</a>
+                                            <a href="#" class="link">Консультирование</a>
+                                            <a href="#" class="link">Международные отношения</a>
+                                            <a href="#" class="link">Навыки для руководителя</a>
+                                            <a href="#" class="link">Продажи</a>
+                                            <a href="#" class="link">Онлайн-проекты</a>
+                                            <a href="#" class="link">Медицина</a>
+                                            <a href="#" class="link">Полиграфолог</a>
+                                            <a href="#" class="link">Анимация</a>
+                                            <a href="#" class="link">Режиссура</a>
+                                            <a href="#" class="link">Униформология</a>
+                                            <a href="#" class="link">Геральдика</a>
+                                            <a href="#" class="link">Военно-мемориальная деятельность</a>
+                                            <a href="#" class="link">Консультирование</a>
+                                        </div>
+                                        <div class="spoiler-pane" id="sp2">sp2</div>
+                                        <div class="spoiler-pane" id="sp3">sp3</div>
+                                        <div class="spoiler-pane" id="sp4">sp4</div>
+                                        <div class="spoiler-pane" id="sp5">sp5</div>
+                                        <div class="spoiler-pane" id="sp6">sp6</div>
+                                        <div class="spoiler-pane" id="sp7">sp7</div>
+                                        <div class="spoiler-pane" id="sp8">sp8</div>
+                                        <div class="spoiler-pane" id="sp9">sp9</div>
+                                        <div class="spoiler-pane" id="sp10">sp10</div>
+                                        <div class="spoiler-pane" id="sp11">sp11</div>
+                                        <div class="spoiler-pane" id="sp12">sp12</div>
+                                        <div class="spoiler-pane" id="sp13">sp13</div>
+                                        <div class="spoiler-pane" id="sp14">sp14</div>
+                                        <div class="spoiler-pane" id="sp15">sp15</div>
+                                        <div class="spoiler-pane" id="sp16">sp16</div>
+                                        <div class="spoiler-pane" id="sp17">sp17</div>
+                                        <div class="spoiler-pane" id="sp18">sp18</div>
+                                        <div class="spoiler-pane" id="sp19">sp19</div>
+                                        <div class="spoiler-pane" id="sp20">sp20</div>
+                                        <div class="spoiler-pane" id="sp21">sp21</div>
+                                        <div class="spoiler-pane" id="sp22">sp22</div>
+                                    </div>
+                                </div>
+                                <div class="dialog__catalog-pane nav-pane" id="n2">456</div>
+                                <div class="dialog__catalog-pane nav-pane" id="n3">789</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <main class="category">
@@ -497,7 +690,54 @@
     </main>
 
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer__info">
+                <div class="col-7">
+                    <div class="row">
+                        <div class="col">
+                            <span>Время работы:</span>
+                            <p>Пн-Чт 9:00-18:00</p><br>
+                            <p>Пт 9:00-16:45</p>
+                        </div>
+                        <div class="col">
+                            <span>Телефон</span>
+                            <p>7 (495) 255-67-67</p><br>
+                            <p>доб. 1282, 1851</p>
+                        </div>
+                        <div class="col">
+                            <span>Доплонительно:</span>
+                            <a href="#">Политика конфиденциальности</a><br>
+                            <a href="#">Главный сайт РГСУ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="#" class="social__link"><img src="assets/svg/tg.svg" alt=""></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link"><img src="assets/svg/wa.svg" alt=""></a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link"><img src="assets/svg/vk.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer__copyright">
+                <div class="col">
+                    <div class="d-flex">
+                        <p>ФГБОУ ВО “Российский государственный социальный университет”</p>
+                        <p>Лицензия № Л035-00115-77/00119907</p>
+                        <p>ИНН 7718084994</p>
+                        <p>ОГРН: 1027700134879</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
